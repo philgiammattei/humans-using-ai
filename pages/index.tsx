@@ -1,16 +1,15 @@
 import Head from "next/head";
 import { generateRSS } from "../rssUtil";
-import { loadBlogPosts } from "../loader";
-/* import FavoritePosts from "../components/FavoritePosts";
-import RecentPosts from "../components/RecentPosts"; */
+import { loadBlogPosts, PostData } from "../loader";
+import FavoritePosts from "../components/FavoritePosts";
+import RecentPosts from "../components/RecentPosts";
 
-/* const Home = (props: {
+const Home = (props: {
   introduction: string;
   features: string;
   readme: string;
   posts: PostData[];
-}) => { */
-const Home = () => {
+}) => {
   return (
     <div className="content">
       <Head>
@@ -42,40 +41,12 @@ const Home = () => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <h1>what this is not</h1>
-      <h2>
-        <ul>
-          <li>speculating about the apocalypse</li>
-          <li>outsourcing human labor</li>
-          <li>making a cheap shopify store</li>
-          <li>getting on a waitlist</li>
-        </ul>
-      </h2>
 
-      <h1>what this is</h1>
-      <h2>people</h2>
-      <h2>
-        <ul>
-          <li>making cool things</li>
-          <li>with ai</li>
-          <li>that help us be</li>
-          <h3>
-            <ul>
-              <li>more present</li>
-              <li>more aware</li>
-              <li>more connected</li>
-            </ul>
-          </h3>
-        </ul>
-      </h2>
-
-      <h1>web site to come shortly</h1>
-
-      {/* <div className="section">
+      <div className="section">
 
         <FavoritePosts posts={props.posts} />
       </div>
-      <RecentPosts posts={props.posts} /> */}
+      <RecentPosts posts={props.posts} />
     </div>
   );
 };
