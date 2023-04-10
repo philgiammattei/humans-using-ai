@@ -38,10 +38,6 @@ File imageFile = null
 
 downloadsDir.eachFile { imgFile ->
     String fileExtension = imgFile.name.tokenize('.').last()
-    println imgFile.name
-    println fileExtension
-    println supportedImageTypes.contains(fileExtension)
-    println file.name.startsWith(arg)
     if (supportedImageTypes.contains(fileExtension) && file.name.startsWith(arg)) {
         imageFile = imgFile
     }
@@ -70,7 +66,7 @@ title:
 subtitle:
 published: true
 datePublished: ${datePublished}
-author: phil
+author: Phil Giammattei
 authorPhoto: /img/profile.jpg
 bannerPhoto: ${bannerPhoto}
 thumbnailPhoto: ${thumbnailPhoto}
